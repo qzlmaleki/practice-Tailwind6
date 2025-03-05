@@ -2,13 +2,108 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-    <h1 class="text-3xl font-bold underline"> Hello world! </h1>
+<body class="flex flex-col h-full">
+
+    <!-- header -->
+    <header class="rounded-lg shadow-md bg-linear-30 bg from-blue-950 to-blue-200 from-10%">
+        <div class="container mx-auto space-x-6">
+            <div class="flex justify-between items-center py-4">
+
+                <!-- Logo -->
+                <div class="text-2xl animate-bounce font-bold text-white">
+                    Logo
+                </div>
+
+                <!-- menu for desktop -->
+                <nav class="hidden md:flex space-x-16">
+                    <a href="#" class="text-black hover:scale-[1.2] transition-all">Home</a>
+
+                    <details class="relative group">
+                        <summary href="#" class="text-black hover:text-white cursor-pointer list-none">Services
+                        </summary>
+                        <div class="absolute bg-gray-200 shadow-md mt-2 py-2 w-48 rounded-lg">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">1</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">2</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">3</a>
+                        </div>
+                    </details>
+
+                    <a href="#" class="text-black hover:scale-[1.2] transition-all">About Us</a>
+                    <a href="#" class="text-black hover:scale-[1.2] transition-all">ContacT Us</a>
+
+                </nav>
+
+                <!-- menu for mobile -->
+                <details class="md:hidden">
+                    <summary class="list-none cursor-pointer">
+                        <hr class="w-6 border-2 border-black rotate-180 rounded mt-1">
+                        <hr class="w-6 border-2 border-black rotate-180 rounded mt-1">
+                        <hr class="w-6 border-2 border-black rotate-180 rounded mt-1">
+                    </summary>
+                    <div class="absolute z-10 bg-gray-100 shadow-md mt-2 py-2 w-full left-0 right-0">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-white">Home</a>
+                        <details>
+                            <summary href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</summary>
+                            <div class="pl-4">
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">1</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">1</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">1</a>
+
+                            </div>
+                        </details>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact Us</a>
+
+                    </div>
+
+                </details>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="text-center relative p-6 flex-grow bg-center bg-cover bg-blue-100 mix-blend-overlay bg-opacity-100">
+        <h1 class="text-2xl text-gray-900">Main content</h1>
+
+
+        <label for="checkbox1"
+            class="block bg-blue-200 mt-4 p-3 group border-2 rounded-2xl overflow-hidden text-left pl-2">
+            <input id="checkbox1" type="checkbox" class="peer hidden">
+            <ul
+                class="bg-blue-950 px-4 transition-all overflow-hidden h-0 peer-checked:h-50 peer-checked:py-4 rounded-2xl text-gray-100">
+                <li class="w-50">Test1</li>
+                <li class="w-50">Test1</li>
+                <li class="w-50">Test1</li>
+                <li class="w-50">Test1</li>
+                <li class="w-50">Test1</li>
+            </ul>
+
+
+
+        </label>
+
+
+
+        <section tabindex="1" class="text-white bg-blue-950 block mt-4 p-3 group border-5 border-blue-500 rounded-2xl overflow-hidden text-left pl-2">
+    using goup tag            
+            <ul class="bg-blue-400 px-4 transition-all overflow-hidden h-0 group-active:h-50 group-active:py-4">
+
+            </ul>
+            
+        </section>
+
+
+
+    </main>
+
+
+
 </body>
 
 </html>
